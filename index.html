@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="15" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="css,travel" />
+        <meta name="description" content="A travel reservation form" />
+        <title>Travel Reservation Form</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        />
+        <!-- bootstrap css cdn -->
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="container-fluid main">
+            <div
+                class="row first-row justify-content-center me-0 align-items-center p-3"
+            >
+                <div
+                    class="col-12 col-sm-6 first-col py-4 justify-content-center mt-4 shadow"
+                >
+                    <div class="row text-center">
+                        <h1 class="text-success">Travel Reservation Form</h1>
+                        <h4 class="text-warning">* denotes mandatory</h4>
+                    </div>
+
+                    <form
+                        action=""
+                        name="myform"
+                        onsubmit="return (validate())"
+                    >
+                        <div class="row form px-5">
+                            <div class="col-12 col-sm-6 f">
+                                <label for="fname">Full name*:</label>
+                            </div>
+                            <div class="col-12 col-sm-6 f">
+                                <input
+                                    class="rounded-3 text-center border-success"
+                                    type="text"
+                                    placeholder="FirstName LastName"
+                                    name="fname"
+                                    id="fname"
+                                />
+                            </div>
+
+                            <div class="col-12 col-sm-6 f">
+                                <label for="email">Email address*:</label>
+                            </div>
+                            <div class="col-12 col-sm-6 f">
+                                <input
+                                    class="rounded-3 text-center border-success"
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email"
+                                    id="email"
+                                />
+                            </div>
+
+                            <div class="col-12 col-sm-6 f pt-4">
+                                <label for="adate">Arrival date*:</label>
+
+                                <input
+                                    class="border-success rounded-3 text-center my-2"
+                                    type="text"
+                                    name="adate"
+                                    id="adate"
+                                    placeholder="day/month/year"
+                                />
+                            </div>
+                            <div class="col-12 col-sm-6 f pt-4">
+                                <label for="package"
+                                    >Select Tour Package*</label
+                                >
+
+                                <select
+                                    class="border-success rounded-3 my-2"
+                                    name="package"
+                                    id="package"
+                                >
+                                    <option value="select">
+                                        select an option
+                                    </option>
+                                    <option value="goa">Goa</option>
+                                    <option value="ooty">Ooty</option>
+                                    <option value="manali">Kulu-Manali</option>
+                                    <option value="ladakh">Ladakh</option>
+                                </select>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="row col-12 col-sm-8">
+                                    <label for="avail"
+                                        >What would you want to avail?*</label
+                                    >
+                                    <div class="col-6 col-sm-6 f">
+                                        <label for="boarding">Boarding</label>
+                                    </div>
+                                    <div class="col-6 col-sm-6 f">
+                                        <input
+                                            type="checkbox"
+                                            name="boarding"
+                                            id="boarding"
+                                        />
+                                    </div>
+                                    <div class="col-6 col-sm-6 f">
+                                        <label for="fooding">Fooding</label>
+                                    </div>
+                                    <div class="col-6 col-sm-6 f">
+                                        <input
+                                            type="checkbox"
+                                            name="fooding"
+                                            id="fooding"
+                                        />
+                                    </div>
+                                    <div class="col-6 col-sm-6 f">
+                                        <label for="sightseeing"
+                                            >Sight seeing</label
+                                        >
+                                    </div>
+                                    <div class="col-6 col-sm-6 f pb-3">
+                                        <input
+                                            type="checkbox"
+                                            name="sightseeing"
+                                            id="sightseeing"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="col-12 col-sm-4 f justify-content-center pt-0"
+                                >
+                                    <label for="persons"
+                                        >Number of persons*:</label
+                                    >
+
+                                    <input
+                                        class="rounded-3 border-success"
+                                        type="text"
+                                        name="persons"
+                                        id="persons"
+                                    />
+
+                                    <label class="pt-4" for="coupon "
+                                        >Discount Coupon code:</label
+                                    >
+
+                                    <input
+                                        class="rounded-3 border-success"
+                                        type="text"
+                                        name="coupon"
+                                        id="coupon"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 text-center f">
+                                <label for="tconditions"
+                                    >Terms and conditions*:</label
+                                >
+                            </div>
+
+                            <div class="col-6 col-sm-6 f text-center">
+                                <label for="agree " class="pb-2">I agree</label>
+                                <!-- </div>
+                            <div class="col-6 col-sm-6 f"> -->
+                                <input
+                                    type="radio"
+                                    name="conditions"
+                                    id="agree"
+                                />
+                            </div>
+
+                            <div class="col-6 col-sm-6 f text-center">
+                                <label for="disagree " class="pb-2"
+                                    >I disagree</label
+                                >
+
+                                <input
+                                    type="radio"
+                                    name="conditions"
+                                    id="disagree"
+                                />
+                            </div>
+                            <div class="row justify-content-center">
+                                <input
+                                    class="btn btn-success mt-2 rounded-5 w-50"
+                                    type="submit"
+                                    value="Submit"
+                                />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- javascript cdn -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- javascript custom -->
+        <script src="./JS/script.js"></script>
+    </body>
+</html>
