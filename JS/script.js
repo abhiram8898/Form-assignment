@@ -7,11 +7,13 @@ function validate() {
     var regName = /^[a-z A-Z]{2,20}$/;
     if (!regName.test(x)) {
         alert("Name must be in characters");
+       
     }
 
     let y = document.getElementById("email").value;
     if (y == "" || y == "null") {
         alert("Email is mandatory");
+       
     }
 
     var mailFormat =
